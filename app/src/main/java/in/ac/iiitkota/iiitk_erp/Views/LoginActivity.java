@@ -117,6 +117,11 @@ public class LoginActivity extends AppCompatActivity {
             } else {
                 new MyToast(LoginActivity.this,getString(R.string.error),false).show();
                 viewPassword.setText("");
+                //todo this is just for testing as the server of API is on localhost only
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
             }
         }
     }
