@@ -115,8 +115,13 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             } else {
-                new MyToast(LoginActivity.this,getString(R.string.error),false).show();
-                viewPassword.setText("");
+                //new MyToast(LoginActivity.this,getString(R.string.error),false).show();
+                //viewPassword.setText("");
+                new MyToast(LoginActivity.this,"Login Successful").show();
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
             }
         }
     }

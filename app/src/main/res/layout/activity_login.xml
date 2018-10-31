@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_grey"
     tools:context=".Views.LoginActivity">
 
     <ImageView
@@ -13,40 +14,62 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
-        android:src="@drawable/avatar_placeholder" />
+        android:src="@drawable/login_avatar" />
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="wrap_content"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/avatar"
         android:id="@+id/t1"
-        android:hint="Username">
+        android:hint="Username"
+        android:textColorHint="@color/white"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/bluish_grey"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopStart="25dp">
 
         <android.support.design.widget.TextInputEditText
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:id="@+id/username"
             android:layout_marginTop="20dp"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:drawableStart="@drawable/user"
+            android:drawablePadding="10dp"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="wrap_content"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_below="@id/t1"
         android:id="@+id/t2"
-        android:hint="Password">
+        android:hint="Password"
+        android:textColorHint="@color/white"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="@color/bluish_grey"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusTopStart="25dp">
 
         <android.support.design.widget.TextInputEditText
             android:ems="10"
             android:id="@+id/password"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:drawableStart="@drawable/lock"
+            android:drawablePadding="10dp"/>
     </android.support.design.widget.TextInputLayout>
 
     <TextView
@@ -56,18 +79,19 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/t2"
         android:layout_marginTop="20dp"
-        android:text="Forgot password?xxxxxxxxxxxxxx"
+        android:text="Forgot password?"
         android:onClick="forgotPassword"/>
 
     <Button
         android:id="@+id/login"
-        android:layout_width="130dp"
+        android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/forgot"
         android:layout_marginTop="25dp"
         android:onClick="login"
-        android:text="Login" />
-
+        android:text="Login"
+        android:textColor="@color/white"
+        android:background="@drawable/button_style" />
 
 </RelativeLayout>
