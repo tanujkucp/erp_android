@@ -25,5 +25,9 @@
 
     <string name="url_events">http://&website;service/event/getEvent</string>
     <string name="url_news">http://&website;service/news/getNews</string>
+    <string name="invitation_for_nomination_of_vayoshrestha_samman_2018">Invitation for Nomination of Vayoshrestha Samman 2018</string>
+    <string name="_2018_04_30">2018-04-30</string>
+    <string name="iiit_kota_celebrated_international_yoga_day_on_june_21_2017_in_mnit_jaipur_campus_how_to_avoid_stress_in_present_day_circumstances_and_stress_management_in_general_were_discussed">IIIT Kota celebrated International Yoga Day on June 21, 2017 in MNIT Jaipur Campus. How to avoid stress in present day circumstances and stress management in general were discussed.</string>
+    <string name="download_the_invitation_here">Download the Invitation here</string>
 
 </resources>
