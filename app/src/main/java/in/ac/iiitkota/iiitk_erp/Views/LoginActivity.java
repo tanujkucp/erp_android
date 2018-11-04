@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+//import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.gson.Gson;
@@ -31,17 +32,30 @@ public class LoginActivity extends AppCompatActivity {
     String username,password;
     TextInputEditText viewUsername,viewPassword;
     ProgressDialog progress;
+    //Button mTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //todo Remove this Button.. This is for test
+        //mTest = (Button) findViewById(R.id.test);
+
         viewUsername=findViewById(R.id.username);
         viewPassword=findViewById(R.id.password);
         progress=new ProgressDialog(LoginActivity.this);
         progress.setCancelable(false);
         progress.setIndeterminate(true);
+
+        //todo Remove this Listner
+        /*mTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+            }
+        });*/
+
     }
 
     public void login(View view){
@@ -114,14 +128,11 @@ public class LoginActivity extends AppCompatActivity {
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
+
             } else {
-                //new MyToast(LoginActivity.this,getString(R.string.error),false).show();
-                //viewPassword.setText("");
-                new MyToast(LoginActivity.this,"Login Successful").show();
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                finish();
+                new MyToast(LoginActivity.this,getString(R.string.error),false).show();
+                viewPassword.setText("");
+
             }
         }
     }
