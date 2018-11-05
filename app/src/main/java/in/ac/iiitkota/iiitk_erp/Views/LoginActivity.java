@@ -3,12 +3,13 @@ package in.ac.iiitkota.iiitk_erp.Views;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.support.design.button.MaterialButton;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-//import android.widget.Button;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.gson.Gson;
@@ -29,36 +30,42 @@ import in.ac.iiitkota.iiitk_erp.Utilities.Server;
 
 public class LoginActivity extends AppCompatActivity {
 
-    String username,password;
+    /*String username,password;
     TextInputEditText viewUsername,viewPassword;
-    ProgressDialog progress;
-    //Button mTest;
+    ProgressDialog progress;*/
+
+    //todo Remove mTest Button and add login mechanism
+    MaterialButton mTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        //todo Remove this Button.. This is for test
-        //mTest = (Button) findViewById(R.id.test);
+        mTest = findViewById(R.id.login);
 
-        viewUsername=findViewById(R.id.username);
+        /*viewUsername=findViewById(R.id.username);
         viewPassword=findViewById(R.id.password);
         progress=new ProgressDialog(LoginActivity.this);
         progress.setCancelable(false);
         progress.setIndeterminate(true);
+        */
+    }
 
-        //todo Remove this Listner
-        /*mTest.setOnClickListener(new View.OnClickListener() {
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(intent);
+                finish();
             }
-        });*/
-
+        });
     }
 
-    public void login(View view){
+    /*public void login(View view){
         //get all the values from the views
         username=viewUsername.getText().toString().trim();
         password=viewPassword.getText().toString().trim();
@@ -134,7 +141,7 @@ public class LoginActivity extends AppCompatActivity {
                 viewPassword.setText("");
 
             }
-        }
+        }*/
     }
 
-}
+
