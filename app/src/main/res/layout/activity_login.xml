@@ -16,6 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:src="@drawable/login_avatar" />
+
     <View
         android:layout_width="350dp"
         android:layout_height="1dp"
@@ -81,6 +82,7 @@
             android:drawableStart="@drawable/lock"
             android:drawablePadding="10dp"/>
     </android.support.design.widget.TextInputLayout>
+
     <View
         android:layout_width="350dp"
         android:layout_height="1dp"
@@ -89,6 +91,7 @@
         android:layout_marginTop="10dp"
         android:id="@+id/line_2"
         android:background="@color/dark_bluish_grey"/>
+
     <TextView
         android:id="@+id/forgot"
         android:layout_width="wrap_content"
@@ -96,8 +99,9 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@id/t2"
         android:layout_marginTop="20dp"
-        android:text="Forgot password?"
-        android:onClick="forgotPassword"/>
+        android:text="Forgot password?"/>
+        <!--todo add this in above textview android:onClick="forgotPassword"-->
+
 
     <!--<Button
         android:id="@+id/login"
@@ -112,40 +116,24 @@
         android:background="@drawable/button_style" />-->
 
     <android.support.design.button.MaterialButton
+        android:id="@+id/login"
+        style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="175dp"
         android:layout_height="55dp"
-        android:gravity="center"
-        app:cornerRadius="30dp"
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:text="login"
-        android:textColor="@color/light_bluish_grey"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/forgot"
         android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="login"
+        android:textColor="@color/light_bluish_grey"
+        android:textSize="18sp"
+        android:backgroundTint="@color/dark_bluish_grey"
+        app:cornerRadius="30dp"
         app:icon="@drawable/key"
         app:iconGravity="textStart"
-        android:onClick="login"
-        android:id="@+id/login"
-        android:textSize="18sp"
         app:iconPadding="15dp"
         app:iconTint="@color/light_bluish_grey"
-        android:backgroundTint="@color/dark_bluish_grey"
-        app:rippleColor="@color/black"
-
-
-        />
-
-    <!--todo Remove this button
-    <Button
-        android:id="@+id/test"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/login"
-        android:layout_marginTop="25dp"
-        android:onClick="login"
-        android:text="without id login"
-        android:textColor="@color/white"
-        android:background="@drawable/button_style" />-->
+        app:rippleColor="@color/black" />
+    <!--todo add this in above button android:onClick="login"-->
 
 </RelativeLayout>
