@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 
 import com.google.gson.Gson;
 
@@ -111,17 +110,12 @@ public class LoginActivity extends AppCompatActivity {
             if (success) {
                 new MyToast(LoginActivity.this,"Login Successful").show();
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 finish();
             } else {
                 new MyToast(LoginActivity.this,getString(R.string.error),false).show();
                 viewPassword.setText("");
-                //todo this is just for testing as the server of API is on localhost only
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                finish();
+
             }
         }
     }

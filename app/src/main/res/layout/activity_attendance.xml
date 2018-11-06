@@ -6,7 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/dark_grey"
     tools:context=".Views.FacultyAttendanceActivity">
-    <!--<GridLayout
+
+    <GridLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_marginTop="3dp"
@@ -15,69 +16,49 @@
         android:id="@+id/button_layout"
         android:layout_height="wrap_content">
 
-        <Button
+        <android.support.design.button.MaterialButton
+            android:id="@+id/all_Present"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:id="@+id/all_Present"
+            android:text="All Present"
+            android:textColor="@color/dark_bluish_grey"
+            android:textSize="18sp"
+            android:onClick="allPresent"
+            android:backgroundTint="@color/dark_grey"
+            app:icon="@drawable/present"
+            app:iconGravity="start"
+            app:iconPadding="15dp"
+            app:iconTint="@color/light_bluish_grey"
+            app:strokeColor="@color/light_black"
+            app:strokeWidth="1.5dp"
+            app:cornerRadius="5dp"
+            app:rippleColor="@color/black" />
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/all_Absent"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="allPresent"
-            android:text="All Present" />
-
-        <Button
-            android:id="@+id/all_Absent"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:text="All Absent"
+            android:textColor="@color/dark_bluish_grey"
+            android:textSize="18sp"
+            android:backgroundTint="@color/dark_grey"
             android:onClick="allAbsent"
-            android:text="All Absent" />
-            </GridLayout>-->
-    <LinearLayout
-        android:id="@+id/button_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true">
+            app:icon="@drawable/absent"
+            app:iconGravity="start"
+            app:iconPadding="15dp"
+            app:iconTint="@color/light_bluish_grey"
+            app:strokeColor="@color/light_black"
+            app:strokeWidth="1.5dp"
+            app:cornerRadius="5dp"
+            app:rippleColor="@color/black" />
 
-    <android.support.design.button.MaterialButton
-        android:id="@+id/all_Present"
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="All Present"
-        android:textColor="@color/dark_bluish_grey"
-        android:textSize="18sp"
-        android:onClick="allPresent"
-        android:backgroundTint="@color/dark_grey"
-        app:icon="@drawable/present"
-        app:iconGravity="start"
-        app:iconPadding="15dp"
-        app:iconTint="@color/light_bluish_grey"
-        app:strokeColor="@color/light_black"
-        app:strokeWidth="1.5dp"
-        app:cornerRadius="5dp"
-        app:rippleColor="@color/black" />
-
-    <android.support.design.button.MaterialButton
-        android:id="@+id/all_Absent"
-        style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="All Absent"
-        android:textColor="@color/dark_bluish_grey"
-        android:textSize="18sp"
-        android:backgroundTint="@color/dark_grey"
-        android:onClick="allAbsent"
-        app:icon="@drawable/absent"
-        app:iconGravity="start"
-        app:iconPadding="15dp"
-        app:iconTint="@color/light_bluish_grey"
-        app:strokeColor="@color/light_black"
-        app:strokeWidth="1.5dp"
-        app:cornerRadius="5dp"
-        app:rippleColor="@color/black" />
-
-    </LinearLayout>
+    </GridLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/students"
