@@ -51,8 +51,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        loggedInUser = Preferences.getLoggedInUser(MainActivity.this);
-        Log.e("MainActivity", loggedInUser.toString());
+        //todo remove comment from line 54 and 55
+//        loggedInUser = Preferences.getLoggedInUser(MainActivity.this);
+//        Log.e("MainActivity", loggedInUser.toString());
 //
 //        Fragment fragment=new EventsFragment();
 //        getSupportFragmentManager().beginTransaction().replace(R.id.base,fragment).commit();
@@ -63,7 +64,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void initBottomNavigation() {
         //initialize the view pager adapter with fragments
         final ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        if (loggedInUser.getRole().equals("Faculty")) {
+        if (true) //todo--> add this as condition loggedInUser.getRole().equals("Faculty"))
+        {
             adapter.addFrag(new FacultyDashboardFragment(),"Dashboard");
         } else if (loggedInUser.getRole().equals("Student")) {
             adapter.addFrag(new StudentDashboardFragment(),"Student");
