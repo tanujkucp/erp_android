@@ -109,14 +109,17 @@ public class LoginActivity extends AppCompatActivity {
             super.onPostExecute(success);
             if (success) {
                 new MyToast(LoginActivity.this,"Login Successful").show();
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+//                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+//                startActivity(intent);
+//                finish();
             } else {
                 new MyToast(LoginActivity.this,getString(R.string.error),false).show();
                 viewPassword.setText("");
 
             }
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         }
     }
 
