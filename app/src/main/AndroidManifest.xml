@@ -22,7 +22,8 @@
         <activity
             android:name=".Views.LoginActivity"
             android:launchMode = "singleTop"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.LoginActivity"></activity>
         <activity
             android:name=".Views.FacultyAttendanceActivity"
             android:launchMode = "singleTop"

@@ -10,7 +10,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/title"
@@ -18,17 +20,19 @@
             android:layout_height="wrap_content"
             android:text="IIIT Kota Celebrated Yoga Day"
             android:textSize="18sp"
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/black"
+            android:textColor="@color/indigo100"
+            android:gravity="center"
             />
         <TextView
             android:id="@+id/organiser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="IIIT Kernel | 2018-04-30"
-            android:layout_marginLeft="5dp"
             android:textSize="15sp"
+            android:layout_marginTop="2dp"
             android:layout_below="@id/title"
+            android:gravity="center"
+            android:textColor="@color/grey100"
             />
 
         <ImageView
@@ -37,7 +41,10 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:elevation="5dp"
+            android:layout_marginTop="3dp"
             android:scaleType="centerCrop"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginRight="-5dp"
             />
         <TextView
             android:id="@+id/description"
@@ -45,8 +52,9 @@
             android:layout_height="wrap_content"
             android:text="IIIT Kota celebrated International Yoga Day on June 21, 2017 in MNIT Jaipur Campus. How to avoid stress in present day circumstances and stress management in general were discussed."
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
             android:textSize="16sp"
-            android:textColor="@color/black"
+            android:textColor="@color/cyan100"
             android:layout_below="@id/image"
             android:layout_marginBottom="5dp"
             />
