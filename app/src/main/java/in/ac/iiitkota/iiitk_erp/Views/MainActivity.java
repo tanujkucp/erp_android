@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //initialize the view pager adapter with fragments
         final ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         //todo commented so that app can override login
-        //if (loggedInUser.getRole().equals("Faculty")) {
+        adapter.addFrag(new ProfileFragment(),"Profile");
         if (true){
             adapter.addFrag(new FacultyDashboardFragment(),"Dashboard");
         } else if (loggedInUser.getRole().equals("Student")) {
@@ -77,6 +77,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //initialize buttons on the bottom navigation
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
+        models.add(new NavigationTabBar.Model.Builder(
+                getResources().getDrawable(R.drawable.avatar_placeholder),
+                Color.parseColor("#000000"))
+                .title("Profile")
+                .badgeTitle("Profile")
+                .build()
+        );
         models.add(new NavigationTabBar.Model.Builder(
                 getResources().getDrawable(R.drawable.ic_menu_camera),
                 Color.parseColor("#000000"))

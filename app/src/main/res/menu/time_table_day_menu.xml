@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/today_tt"
+        android:title="Today's Time-Table"
+        />
+    <item
+        android:id="@+id/next_tt"
+        android:title="Next Working Day"
+        />
+    <item
+        android:id="@+id/complete_tt"
+        android:title="Full Time-Table"
+        />
+
+</menu>
