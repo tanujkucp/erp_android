@@ -203,7 +203,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         String Days[] = {"Sunday","Monday","Tuesday","Wednesday",
                             "Thursday","Friday","Saturday"};
         Calendar calendar = Calendar.getInstance();
-        int dayIndex = calendar.get(Calendar.DAY_OF_WEEK);
+        int dayIndex = calendar.get(Calendar.DAY_OF_WEEK)-1;
 
         return Days[dayIndex];
     }
@@ -212,10 +212,9 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         String Days[] = {"Sunday","Monday","Tuesday","Wednesday",
                             "Thursday","Friday","Saturday"};
         Calendar calendar = Calendar.getInstance();
-        int dayIndex = calendar.get(Calendar.DAY_OF_WEEK)+1;
+        int dayIndex = calendar.get(Calendar.DAY_OF_WEEK);
 
         if(dayIndex<6) return Days[dayIndex];
-        else if(dayIndex==6) return Days[1];
         else return Days[1];
     }
 
