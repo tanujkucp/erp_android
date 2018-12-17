@@ -21,7 +21,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import in.ac.iiitkota.iiitk_erp.Adapters.TimeTableAdapter;
+
+import in.ac.iiitkota.iiitk_erp.Adapters.textfieldsAdapter;
 import in.ac.iiitkota.iiitk_erp.Models.TimeTable;
 import in.ac.iiitkota.iiitk_erp.R;
 /*
@@ -159,7 +160,8 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
                 mLayoutManager = new LinearLayoutManager(getActivity());
                 mRecyclerView.setLayoutManager(mLayoutManager);
 
-                mAdapter = new TimeTableAdapter(getActivity(), List);
+                mAdapter = new textfieldsAdapter(getActivity());
+                ((textfieldsAdapter) mAdapter).setTimeTableAdapter(List);
                 mRecyclerView.setAdapter(mAdapter);
             }
         }else{
@@ -171,7 +173,8 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             mLayoutManager = new LinearLayoutManager(getActivity());
             mRecyclerView.setLayoutManager(mLayoutManager);
 
-            mAdapter = new TimeTableAdapter(getActivity(), List);
+            mAdapter = new textfieldsAdapter(getActivity());
+            ((textfieldsAdapter) mAdapter).setTimeTableAdapter(List);
             mRecyclerView.setAdapter(mAdapter);
         }
     }
@@ -194,7 +197,8 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             mLayoutManager= new LinearLayoutManager(getActivity());
             mRecyclerView.setLayoutManager(mLayoutManager);
 
-            mAdapter = new TimeTableAdapter(getActivity(),List);
+            mAdapter = new textfieldsAdapter(getActivity());
+            ((textfieldsAdapter) mAdapter).setTimeTableAdapter(List);
             mRecyclerView.setAdapter(mAdapter);
         }
     }
@@ -225,36 +229,55 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
     .....
     "Users":{
-        "user1_uniqueId":{
+        "user1_uniqueId(if_faculty)/college_id(if_student)":{
             "name":"something",
-            "role":"something",
+            "role":"faculty",
             ...
             ...
             "bioDesc":"something",
-            "subjects":{
-                "1":"subjectCode1",
-                "2":"subjectCode2",
-                ...
-                ...
-            },
+            "Subjects":{
+                "1":{
+                    "SubjectCode":"CST101",
+                    "present":null,
+                    "absent":null,
+                    "leave":null,
+                    "total":null
+                },
+                "2":{
+                    "SubjectCode":"CST102",
+                    "present":null,
+                    "absent":null,
+                    "leave":null,
+                    "total":null
+                },
             ...
         },
-        "user2_uniqueId":{
+        "user2_uniqueId(if_faculty)/college_id(if_student)":{
             "name":"something",
-            "role":"something",
+            "role":"student",
             ...
             ...
             "bioDesc":"something",
-            "subjects":{
-                "1":"subjectCode1",
-                "2":"subjectCode2",
-                .....
-            },....
+            "Subjects":{
+                "1":{
+                    "SubjectCode":"CST101",
+                    "present":15,
+                    "absent":4,
+                    "leave":1,
+                    "total":20
+                },
+                "2":{
+                    "SubjectCode":"CST101",
+                    "present":15,
+                    "absent":4,
+                    "leave":1,
+                    "total":20
+                },....
         },....
     }
     ...
     ...
-    "Subjects":{
+    "TimeTable":{
         "Monday":{
             "subjectCode1":{
                 "fromTime":"x",
