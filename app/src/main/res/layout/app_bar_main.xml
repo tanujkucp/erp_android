@@ -29,6 +29,7 @@
         android:id="@+id/vp_horizontal_ntb"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/indigo100"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <devlight.io.library.ntb.NavigationTabBar
@@ -37,10 +38,10 @@
         android:layout_height="50dp"
         android:layout_gravity="bottom"
         android:elevation="5dp"
-        app:ntb_badge_bg_color="#fff"
+        app:ntb_badge_bg_color="@color/indigo100"
         app:ntb_badge_gravity="top"
         app:ntb_badge_position="right"
-        app:ntb_badge_title_color="#ff0000"
+        app:ntb_badge_title_color="@color/blue_grey600"
         app:ntb_badged="true"
         app:ntb_icon_size_fraction="0.6"
         app:ntb_scaled="true"

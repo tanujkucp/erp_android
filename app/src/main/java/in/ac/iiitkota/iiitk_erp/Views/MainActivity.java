@@ -51,8 +51,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        loggedInUser = Preferences.getLoggedInUser(MainActivity.this);
-        Log.e("MainActivity", loggedInUser.toString());
+        //todo commented so that app can override login
+        //loggedInUser = Preferences.getLoggedInUser(MainActivity.this);
+       // Log.e("MainActivity", loggedInUser.toString());
 //
 //        Fragment fragment=new EventsFragment();
 //        getSupportFragmentManager().beginTransaction().replace(R.id.base,fragment).commit();
@@ -63,7 +64,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void initBottomNavigation() {
         //initialize the view pager adapter with fragments
         final ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        if (loggedInUser.getRole().equals("Faculty")) {
+        //todo commented so that app can override login
+        adapter.addFrag(new ProfileFragment(),"Profile");
+        if (true){
             adapter.addFrag(new FacultyDashboardFragment(),"Dashboard");
         } else if (loggedInUser.getRole().equals("Student")) {
             adapter.addFrag(new StudentDashboardFragment(),"Student");
@@ -74,6 +77,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //initialize buttons on the bottom navigation
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
+        models.add(new NavigationTabBar.Model.Builder(
+                getResources().getDrawable(R.drawable.avatar_placeholder),
+                Color.parseColor("#000000"))
+                .title("Profile")
+                .badgeTitle("Profile")
+                .build()
+        );
         models.add(new NavigationTabBar.Model.Builder(
                 getResources().getDrawable(R.drawable.ic_menu_camera),
                 Color.parseColor("#000000"))

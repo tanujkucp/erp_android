@@ -2,15 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/indigo100"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="3dp">
 
-    <android.support.v7.widget.CardView
+    <android.support.design.card.MaterialCardView
         android:id="@+id/card_poll"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginBottom="10dp"
+        style="@style/Widget.MaterialComponents.CardView"
         android:elevation="10dp"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="8dp"
+        app:strokeColor="@color/blue_grey600"
+        app:strokeWidth="1dp" >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -22,9 +29,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="marquee"
-                android:gravity="left"
+                android:gravity="center"
                 android:text="2017KUCP1017 | Tanuj Mehta"
-                android:textColor="@color/black"
+                android:textColor="@color/grey800"
                 android:textSize="18sp" />
 
             <LinearLayout
@@ -38,6 +45,7 @@
                     android:id="@+id/present"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="2.5dp"
                     android:text="Present" />
 
                 <Button
@@ -45,6 +53,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/present"
+                    android:layout_marginRight="2.5dp"
+                    android:layout_marginLeft="2.5dp"
                     android:text="Absent" />
 
                 <Button
@@ -52,10 +62,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/absent"
+                    android:layout_marginLeft="2.5dp"
                     android:text="Leave" />
+
             </LinearLayout>
 
-
         </RelativeLayout>
-    </android.support.v7.widget.CardView>
+    </android.support.design.card.MaterialCardView>
 </RelativeLayout>
