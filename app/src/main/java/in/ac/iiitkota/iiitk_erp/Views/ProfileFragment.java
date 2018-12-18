@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -45,6 +46,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.e("tag","atProfileFragment");
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
 
@@ -163,6 +165,8 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
                 mAdapter = new textfieldsAdapter(getActivity());
                 ((textfieldsAdapter) mAdapter).setTimeTableAdapter(List);
                 mRecyclerView.setAdapter(mAdapter);
+
+                //((textfieldsAdapter) mAdapter).TimeTable = false;
             }
         }else{
             TimeTable current = new TimeTable(true);
@@ -176,6 +180,8 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             mAdapter = new textfieldsAdapter(getActivity());
             ((textfieldsAdapter) mAdapter).setTimeTableAdapter(List);
             mRecyclerView.setAdapter(mAdapter);
+
+            //((textfieldsAdapter) mAdapter).TimeTable = false;
         }
     }
 
@@ -200,6 +206,8 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
             mAdapter = new textfieldsAdapter(getActivity());
             ((textfieldsAdapter) mAdapter).setTimeTableAdapter(List);
             mRecyclerView.setAdapter(mAdapter);
+
+            //((textfieldsAdapter) mAdapter).TimeTable = false;
         }
     }
 

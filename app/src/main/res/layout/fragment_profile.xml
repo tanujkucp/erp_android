@@ -64,7 +64,7 @@
         android:layout_marginRight="2dp"
         android:gravity="center_vertical"/>
 
-    <android.support.v7.widget.AppCompatImageButton
+    <android.support.v7.widget.AppCompatImageView
         android:id="@+id/profile_edit_bio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,6 +72,7 @@
         android:layout_below="@+id/profile_logout"
         android:layout_marginTop="15dp"
         android:layout_alignRight="@id/profile_name"
+        android:clickable="true"
         android:tooltipText="Edit Bio"/>
 
     <TextView
@@ -100,7 +101,7 @@
         android:layout_marginRight="2dp"
         android:gravity="center_vertical"/>
 
-    <android.support.v7.widget.AppCompatImageButton
+    <android.support.v7.widget.AppCompatImageView
         android:id="@+id/profile_list_tt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -109,7 +110,7 @@
         android:layout_marginTop="15dp"
         android:layout_alignRight="@id/profile_name"
         android:contentDescription="Select Day"
-        android:onClick="popUpDayMenu"/>
+        android:clickable="true" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/profile_tt_rv"

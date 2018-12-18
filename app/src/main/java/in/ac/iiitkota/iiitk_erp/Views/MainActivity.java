@@ -13,7 +13,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -63,13 +62,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void initBottomNavigation() {
         //initialize the view pager adapter with fragments
+        String role = "Student";
+
         final ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         //todo commented so that app can override login
         adapter.addFrag(new ProfileFragment(),"Profile");
-        if (true){
-            adapter.addFrag(new FacultyDashboardFragment(),"Dashboard");
-        } else if (loggedInUser.getRole().equals("Student")) {
-            adapter.addFrag(new StudentDashboardFragment(),"Student");
+        if (role.equals("Faculty")){
+            adapter.addFrag(new FacultyDashboardFragment(),"Attendance");
+        } else if (role.equals("Student")) {
+            adapter.addFrag(new StudentDashboardFragment(),"Attendance");
+            adapter.addFrag(new ItemIssuedFragment(),"Item Issued");
         }
         adapter.addFrag(new EventsFragment(),"Events");
         adapter.addFrag(new NewsFragment(),"News");
@@ -85,12 +87,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 .build()
         );
         models.add(new NavigationTabBar.Model.Builder(
-                getResources().getDrawable(R.drawable.ic_menu_camera),
+                getResources().getDrawable(R.drawable.ic_attendance),
                 Color.parseColor("#000000"))
-                .title("Dashboard")
-                .badgeTitle("Faculty")
-                .build())
-        ;
+                .title("Attendance")
+                .badgeTitle("Student")
+                .build()
+        );
+        if(role.equals("Student")){
+        models.add(new NavigationTabBar.Model.Builder(
+                getResources().getDrawable(R.drawable.ic_item_issued),
+                Color.parseColor("#000000"))
+                .title("Item Issued")
+                .badgeTitle("New!")
+                .build()
+        );}
         models.add(new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.ic_menu_gallery),
                         Color.parseColor("#000000"))

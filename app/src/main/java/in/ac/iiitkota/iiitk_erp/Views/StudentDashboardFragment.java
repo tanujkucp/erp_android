@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,7 @@ public class StudentDashboardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        Log.e("tag1","atStudentFragment");
         View v= inflater.inflate(R.layout.fragment_student_dashboard, container, false);
 
         mRecyclerView = (RecyclerView) v.findViewById(R.id.status_recyclerView);
@@ -61,6 +63,8 @@ public class StudentDashboardFragment extends Fragment {
         mAdapter = new textfieldsAdapter(getActivity());
         ((textfieldsAdapter) mAdapter).setAttendanceStatusAdapter(list);
         mRecyclerView.setAdapter(mAdapter);
+
+        //((textfieldsAdapter) mAdapter).AttendanceStatus = false;
 
     }
 

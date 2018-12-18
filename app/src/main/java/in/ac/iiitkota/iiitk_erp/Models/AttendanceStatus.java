@@ -12,7 +12,8 @@ public class AttendanceStatus {
         present = p;
         leave = l;
         total = t;
-        percentage = (present/total)*100;
+        percentage = (p*100)/t;
+        System.out.println(percentage);
 
         t1 = "Subject Code: "+subjectCode;
         t2 = "Attended "+String.valueOf(present)+" out of "+String.valueOf(total)+" class with "
