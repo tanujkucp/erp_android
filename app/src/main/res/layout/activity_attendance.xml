@@ -7,67 +7,77 @@
     android:background="@color/indigo100"
     tools:context=".Views.FacultyAttendanceActivity">
 
-    <GridLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="3dp"
-        android:columnCount="2"
-        android:padding="3dp"
-        android:id="@+id/button_layout"
+       android:layout_alignParentTop="true"
         android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp"
+                android:gravity="center_horizontal"
+                android:padding="3dp"
+                android:id="@+id/button_layout"
+                android:layout_height="wrap_content">
 
-        <android.support.design.button.MaterialButton
-            android:id="@+id/all_Present"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:text="All Present"
-            android:textColor="@color/green600"
-            android:textSize="18sp"
-            android:onClick="allPresent"
-            android:backgroundTint="@color/indigo100"
-            app:icon="@drawable/present"
-            app:iconGravity="start"
-            app:iconPadding="15dp"
-            app:iconTint="@color/green600"
-            app:strokeColor="@color/grey800"
-            app:strokeWidth="1.5dp"
-            app:cornerRadius="5dp"
-            app:rippleColor="@color/black" />
+                <android.support.design.button.MaterialButton
+                    android:id="@+id/all_Present"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="All Present"
+                    android:textColor="@color/green600"
+                    android:textSize="15sp"
+                    android:onClick="allPresent"
+                    android:backgroundTint="@color/indigo100"
+                    app:icon="@drawable/present"
+                    app:iconGravity="start"
+                    app:iconPadding="10dp"
+                    app:iconTint="@color/green600"
+                    app:strokeColor="@color/grey800"
+                    app:strokeWidth="1.5dp"
+                    app:cornerRadius="5dp"
+                    app:rippleColor="@color/black" />
 
-        <android.support.design.button.MaterialButton
-            android:id="@+id/all_Absent"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:text="All Absent"
-            android:textColor="@color/red500"
-            android:textSize="18sp"
-            android:backgroundTint="@color/indigo100"
-            android:onClick="allAbsent"
-            app:icon="@drawable/absent"
-            app:iconGravity="start"
-            app:iconPadding="15dp"
-            app:iconTint="@color/red500"
-            app:strokeColor="@color/grey800"
-            app:strokeWidth="1.5dp"
-            app:cornerRadius="5dp"
-            app:rippleColor="@color/black" />
+                <android.support.design.button.MaterialButton
+                    android:id="@+id/all_Absent"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton.Icon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="All Absent"
+                    android:textColor="@color/red500"
+                    android:textSize="15sp"
+                    android:backgroundTint="@color/indigo100"
+                    android:onClick="allAbsent"
+                    app:icon="@drawable/absent"
+                    app:iconGravity="start"
+                    app:iconPadding="10dp"
+                    app:iconTint="@color/red500"
+                    app:strokeColor="@color/grey800"
+                    app:strokeWidth="1.5dp"
+                    app:cornerRadius="5dp"
+                    app:rippleColor="@color/black" />
 
-    </GridLayout>
+            </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/students"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/button_layout"
-        android:layout_marginHorizontal="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="40dp" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/students"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/button_layout"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="40dp" />
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
 
     <TextView
         android:id="@+id/poll_status"
