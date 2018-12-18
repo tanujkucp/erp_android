@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#000000</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#1a237e</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#b2ebf2</color>
+    <color name="navigationBar">#7986cb</color>
+    <color name="noActionBarPrimaryDark">#7986cb</color>
 
     <!--my cutom colors-->
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
     <color name="red500">#F44336</color>
     <color name="green600">#43A047</color>
-    <color name="black_light">#88000000</color>
-    <color name="semi_black">#212121</color>
-    <color name="light_black">#484848</color>
-    <color name="grey">#f5f4f6</color>
-    <color name="dark_grey">#e0e1e0</color>
-    <color name="bluish_grey">#89a1ae</color>
-    <color name="dark_bluish_grey">#5e7480</color>
-    <color name="light_bluish_grey">#b9d1e0</color>
+    <color name="grey100">#f5f5f5</color>
+    <color name="grey300">#e0e0e0</color>
+    <color name="grey600">#757575</color>
+    <color name="grey800">#424242</color>
+    <color name="grey900">#212121</color>
+    <color name="blue_grey300">#90a4ae</color>
+    <color name="blue_grey600">#546e7a</color>
+    <color name="indigo100">#c5cae9</color>
+    <color name="indigo400">#5c6bc0</color>
+    <color name="indigo700">#303f9f</color>
+    <color name="cyan100">#b2ebf2</color>
 
 </resources>

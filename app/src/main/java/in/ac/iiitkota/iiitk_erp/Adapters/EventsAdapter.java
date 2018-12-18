@@ -74,7 +74,7 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
         // with that element
         Event current=events.get(pos);
         viewHolder.getTitle().setText(current.getTitle());
-        viewHolder.getOrganiser().setText(current.getOrganizer()+" | "+current.getDate().substring(0,10));
+        viewHolder.getOrganiser().setText(current.getDate().substring(0,10)+" | "+current.getOrganizer());
         viewHolder.getDescription().setText(current.getDescription());
         //load the image in imageView
         GlideApp.with(context).load("http://www.iiitkota.ac.in/uploads/"+current.getEventPhoto()).centerCrop()
